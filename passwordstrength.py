@@ -15,17 +15,19 @@ UPPER= string.letters[25: ]
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LOWER = 'abcdefghijklmnopqrstuvwxyz'
+#there are repetitions because we divided up the different tests and used different variables
 DIGITS = '0123456789'
 EVERYTHING = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'
 ROW2 = 'qwertyuiop'
 ROW3 = 'asdfghjkl'
+#global variables
 def HowMany(s1,s2):
     num = 0
     for c in s1:
         if s2.count(c) > 0:
             num = num + 1
     return num
-
+#counts how many characters in s1 are in s2
 def HowManyTriplets(s1,s2):
     num=0
     for c in range(0,len(s1)):
@@ -36,7 +38,7 @@ def HowManyTriplets(s1,s2):
         else:
             num=0
     return num
-     
+ #counts how many times there are three consecutive look-a-likes    
 def B1(s):
     """ Returns an int that is a score associated
     with password length.
